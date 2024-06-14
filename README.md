@@ -1,5 +1,12 @@
 # Quan Ly Cua hang do go noi that
 BTL: Mon HQT- CSDL
+///////////////////////////
+Họ và tên: Lại Chí Bảo   //
+Lớp: K57KMT.01           //
+MSSV: K215520216829      //
+///////////////////////////
+
+
 - Tạo Database: Quan_BH_Cua_hang_do_go
   - Customer(CustomerID[primary], FullName, PhoneNumber, Email, Address)
   - OderDetails(OrderDetailID[primary], OrderID, ProductID, Quantity, Price)
