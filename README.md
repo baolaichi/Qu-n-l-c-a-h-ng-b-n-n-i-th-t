@@ -1,2 +1,2 @@
-# Qu-n-l-c-a-h-ng-b-n-n-i-th-t
+# Quan Ly Cua hang do go noi that
 BTL: Mon HQT- CSDL
