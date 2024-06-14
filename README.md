@@ -79,6 +79,7 @@ BEGIN
         IF @SellingPrice < @CostPrice
         BEGIN
             SET @Loss = (@CostPrice - @SellingPrice) * @Quantity;
+	    
             -- Chèn kết quả vào bảng tạm
             INSERT INTO #Losses (OrderID, ProductID, ProductName, Quantity, SellingPrice, CostPrice, Loss)
             VALUES (@OrderID, @ProductID, @ProductName, @Quantity, @SellingPrice, @CostPrice, @Loss);
@@ -89,6 +90,7 @@ BEGIN
     
     CLOSE order_cursor;
     DEALLOCATE order_cursor;
+    
 
     -- Truy vấn bảng tạm để hiển thị kết quả
     SELECT * FROM #Losses;
@@ -96,8 +98,8 @@ BEGIN
     -- Xóa bảng tạm
     DROP TABLE #Losses;
 END;
--- chạy thủ tục
 
+-- chạy thủ tục
 EXEC CalculateLosses;
 
   
