@@ -33,7 +33,6 @@ I, Mô tả hệ thống (Quản lý thông tin cửa hàng nội thất)
    + KhachHangID là khóa ngoại để xác định khách hàng đặt hàng.
    + NgayDatHang là bắt buộc vì cần biết ngày nào đơn hàng được tạo.
    + TongTien được tính tự động dựa trên chi tiết đơn hàng.
-   + 
                 ![image](https://github.com/baolaichi/Quan_Ly_Cua_hang_Noi_That/assets/131328468/5be8df01-91ed-431d-9398-b3f9bb5ecd1d)
                                     -Bảng Đơn hàng-
 
