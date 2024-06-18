@@ -141,7 +141,7 @@ Loại: Không khóa
 Giải thích: Đây là màu sắc của sản phẩm.
 Kiểu dữ liệu: VARCHAR(50)
 NULL: Có
-   [-Bảng Sản Phẩm-](![image](https://github.com/baolaichi/Quan_Ly_Cua_hang_Noi_That/assets/131328468/9489bed2-8dd6-472f-b926-5328b565668b))
+   [-Bảng Sản Phẩm-] (![image](https://github.com/baolaichi/Quan_Ly_Cua_hang_Noi_That/assets/131328468/9489bed2-8dd6-472f-b926-5328b565668b))
                                                 
  -Bảng DonHang
 Bảng DonHang chứa thông tin về các đơn hàng.
@@ -167,7 +167,7 @@ Ràng buộc: Không được NULL.
 Mô tả: Mã khách hàng (foreign key liên kết với bảng KhachHang).
 Kiểu dữ liệu: INT
 Ràng buộc: Không được NULL
-   [-Bảng Đơn hàng-]  (![image](https://github.com/baolaichi/Quan_Ly_Cua_hang_Noi_That/assets/131328468/c2c84577-a0e6-476c-b8e8-216975dca1da))
+   [-Bảng Đơn hàng-] (![image](https://github.com/baolaichi/Quan_Ly_Cua_hang_Noi_That/assets/131328468/c2c84577-a0e6-476c-b8e8-216975dca1da))
 
                                        			
  -ChiTietDonHang
@@ -194,7 +194,7 @@ Ràng buộc: Không được NULL.
 Mô tả: Giá bán của sản phẩm.
 Kiểu dữ liệu: FLOAT
 Ràng buộc: Không được NULL.
-   [-Bảng Chi tiết đơn hàng-](![image](https://github.com/baolaichi/Quan_Ly_Cua_hang_Noi_That/assets/131328468/a005f779-ebfe-4622-9ccc-b6ede794bbef))
+   [-Bảng Chi tiết đơn hàng-] (![image](https://github.com/baolaichi/Quan_Ly_Cua_hang_Noi_That/assets/131328468/a005f779-ebfe-4622-9ccc-b6ede794bbef))
 
      					
 -Bảng NhaCungCap
@@ -220,25 +220,28 @@ Mô tả: Số điện thoại của nhà cung cấp.
 Kiểu dữ liệu: VARCHAR(20)
 Ràng buộc:
 Not Null: Bắt buộc phải nhập, vì cần số điện thoại để liên hệ với nhà cung cấp.
-   [-Bảng Nhà Cung Cấp-](![image](https://github.com/baolaichi/Quan_Ly_Cua_hang_Noi_That/assets/131328468/440267c5-39c7-44c9-bfab-686e196cada7))
+   [-Bảng Nhà Cung Cấp-] (![image](https://github.com/baolaichi/Quan_Ly_Cua_hang_Noi_That/assets/131328468/440267c5-39c7-44c9-bfab-686e196cada7))
 
      					
 
 
 II. Các SP của các chức năng
+
 1. thêm, sửa, xóa Hàng Hóa. có chức năng:
-	[Thêm đơn hàng: Thêm dữ liệu mới vào DonHang và ChiTietDonHang.
-	Sửa đơn hàng: Cập nhật thông tin trong DonHang và xóa rồi thêm lại các chi tiết đơn hàng.
-	Xóa đơn hàng: Xóa dữ liệu từ cả hai bảng DonHang và ChiTietDonHang.]
-```sql
+[Thêm đơn hàng: Thêm dữ liệu mới vào DonHang và ChiTietDonHang.]
+[Sửa đơn hàng: Cập nhật thông tin trong DonHang và xóa rồi thêm lại các chi tiết đơn hàng.]
+[Xóa đơn hàng: Xóa dữ liệu từ cả hai bảng DonHang và ChiTietDonHang.]
+
  --------------Liệt Kê Tất Cả Hàng Hóa-----------------
+ ```sql
  CREATE PROCEDURE LietKeHangHoa
 AS
 BEGIN
  SELECT * FROM SanPham;
 END;
-
+```
  --- Thêm Một Hàng Hóa -------
+ ```sql
 CREATE PROCEDURE ThemHangHoa
     @TenSanPham NVARCHAR(100),
     @LoaiSanPham NVARCHAR(50),
@@ -252,7 +255,7 @@ BEGIN
    INSERT INTO SanPham (TenSanPham, LoaiSanPham, GiaBan, SoLuongTon, KichThuoc, ChatLieu, MauSac)
   VALUES (@TenSanPham, @LoaiSanPham, @GiaBan, @SoLuongTon, @KichThuoc, @ChatLieu, @MauSac);
 END;
-
+```
  ------Xóa Một Hàng Hóa--------------
  ```sql
  CREATE PROCEDURE XoaHangHoa
@@ -261,9 +264,9 @@ AS
 BEGIN
     DELETE FROM SanPham WHERE MaSanPham = @MaSanPham;
 END;
-
+```
 ---------------------Sửa thông tin hàng hóa-------------
-'''sql
+```sql
 CREATE PROCEDURE SuaThongTinHangHoa
     @MaSanPham INT,
     @TenSanPham NVARCHAR(100),
@@ -285,13 +288,13 @@ BEGIN
         MauSac = @MauSac
     WHERE MaSanPham = @MaSanPham;
 END;
-
--2, Thêm, Sửa, Xóa Hóa Đơn. có các chức năng:
-	[Thêm một dòng mới vào bảng SanPham với thông tin về tên sản phẩm, giá và số lượng.
-	 Cập nhật thông tin của một sản phẩm đã có trong bảng SanPham dựa trên SanPhamID.
-	 Xóa một sản phẩm khỏi bảng SanPham dựa trên SanPhamID.]
+```
+2. Thêm, Sửa, Xóa Hóa Đơn. có các chức năng:
+[Thêm một dòng mới vào bảng SanPham với thông tin về tên sản phẩm, giá và số lượng.]
+[Cập nhật thông tin của một sản phẩm đã có trong bảng SanPham dựa trên SanPhamID.]
+[Xóa một sản phẩm khỏi bảng SanPham dựa trên SanPhamID.]
   --------------Thêm Một Hóa Đơn--------------	 
-  '''sql
+  ```sql
 CREATE PROCEDURE ThemHoaDon
   @NgayDatHang DATE,
     @MaKhachHang INT,
@@ -302,9 +305,9 @@ BEGIN
     INSERT INTO DonHang (NgayDatHang, MaKhachHang, TongGiaTri, TinhTrangDonHang)
     VALUES (@NgayDatHang, @MaKhachHang, @TongGiaTri, @TinhTrangDonHang);
 END;
-
+```
 ------------Sửa Một Hóa Đơn-------------------
-'''sql
+```sql
 CREATE PROCEDURE SuaHoaDon
     @MaDonHang INT,
     @NgayDatHang DATE,
@@ -320,9 +323,9 @@ BEGIN
         TinhTrangDonHang = @TinhTrangDonHang
     WHERE MaDonHang = @MaDonHang;
 END;
-
+```
 ------------Xóa 1 hóa đơn--------------
-'''sql
+```sql
 CREATE PROCEDURE XoaHoaDon
     @MaDonHang INT
 AS
@@ -330,8 +333,9 @@ BEGIN
     DELETE FROM ChiTietDonHang WHERE MaDonHang = @MaDonHang;
     DELETE FROM DonHang WHERE MaDonHang = @MaDonHang;
 END;
+```
 ------------Thêm một chi tiết hóa đơn----------------
-'''sql
+```sql
 CREATE PROCEDURE ThemChiTietHoaDon
     @MaDonHang INT,
     @MaSanPham INT,
@@ -342,8 +346,9 @@ BEGIN
     INSERT INTO ChiTietDonHang (MaDonHang, MaSanPham, SoLuong, GiaBan)
     VALUES (@MaDonHang, @MaSanPham, @SoLuong, @GiaBan);
 END;
+```
 ------------Cập Nhật Số Lượng Cho Một Chi Tiết Hóa Đơn----------------
-'''sql
+```sql
 CREATE PROCEDURE CapNhatSoLuongChiTietHoaDon
     @MaChiTietDonHang INT,
     @SoLuong INT
@@ -353,21 +358,21 @@ BEGIN
     SET SoLuong = @SoLuong
     WHERE MaChiTietDonHang = @MaChiTietDonHang;
 END;
-
+```
 ---------------Xóa Một Dòng Trong Chi Tiết Hóa Đơn-----------
-'''sql
+```sql
 CREATE PROCEDURE XoaChiTietHoaDon
     @MaChiTietDonHang INT
 AS
 BEGIN
     DELETE FROM ChiTietDonHang WHERE MaChiTietDonHang = @MaChiTietDonHang;
 END;
+```
 
-
--3, Các SP_Báo Cáo
+3. Các SP_Báo Cáo
 ----------Báo Cáo Hàng Tồn------------
 [stored procedure có tên là BaoCaoHangTon trong cơ sở dữ liệu hiện tại. Stored procedure này sẽ lấy tên sản phẩm và số lượng tồn của các sản phẩm có số lượng tồn lớn hơn 0 từ bảng SanPham.]
-'''sql
+```sql
 CREATE PROCEDURE BaoCaoHangTon
 AS
 BEGIN
@@ -375,10 +380,10 @@ BEGIN
     FROM SanPham
     WHERE SoLuongTon > 0;
 END;
-
+```
 ------------------Báo Cáo Hàng Bán Nhiều Nhất Trong Tháng---------------------
 [stored procedure có tên là BaoCaoHangBanNhieuTrongThang trong cơ sở dữ liệu hiện tại. Stored procedure này lấy tên sản phẩm và tổng số lượng đã bán trong tháng và năm được chỉ định từ bảng ChiTietDonHang, DonHang, và SanPham.]
-'''sql
+```sql
 CREATE PROCEDURE BaoCaoHangBanNhieuTrongThang
     @Thang INT,
     @Nam INT
@@ -392,10 +397,10 @@ BEGIN
     GROUP BY SP.TenSanPham
     ORDER BY SoLuongBan DESC;
 END;
-
+```
 ----------------Báo Cáo Mặt Hàng Bán Chạy Trong Tháng------------------------
 [Stored procedure này lấy tên của mặt hàng bán chạy nhất (có số lượng bán nhiều nhất) trong tháng và năm được chỉ định từ bảng ChiTietDonHang, DonHang, và SanPham.]
-'''sql
+```sql
 CREATE PROCEDURE BaoCaoMatHangBanChayTrongThang
     @Thang INT,
     @Nam INT
@@ -409,10 +414,10 @@ BEGIN
     GROUP BY SP.TenSanPham
     ORDER BY SoLuongBan DESC;
 END;
-
+```
 -------------Cập Nhật Số Lượng Tồn Kho Khi Thêm Chi Tiết Hóa Đơn--------------
 (Trigger)
-'''sql
+```sql
 CREATE TRIGGER CapNhatSoLuongTonSauKhiThemChiTiet
 ON ChiTietDonHang
 AFTER INSERT
@@ -425,10 +430,11 @@ BEGIN
     SET SoLuongTon = SoLuongTon - @SoLuong
     WHERE MaSanPham = @MaSanPham;
 END;
-[-trigger này đảm bảo rằng mỗi khi có thêm chi tiết đơn hàng mới vào bảng ChiTietDonHang, số lượng tồn của sản phẩm tương ứng trong bảng SanPham sẽ được cập nhật tự động giảm đi số lượng đó. Điều này giúp duy trì tính toàn vẹn dữ liệu và đồng bộ giữa các bảng dữ liệu trong hệ thống của bạn]
+```
+[trigger này đảm bảo rằng mỗi khi có thêm chi tiết đơn hàng mới vào bảng ChiTietDonHang, số lượng tồn của sản phẩm tương ứng trong bảng SanPham sẽ được cập nhật tự động giảm đi số lượng đó. Điều này giúp duy trì tính toàn vẹn dữ liệu và đồng bộ giữa các bảng dữ liệu trong hệ thống của bạn]
 
 ---------------Cursor Báo Cáo Hàng Bán Trong Tháng--------------
-'''sql
+```sql
 CREATE PROCEDURE BaoCaoHangBanTrongThang
     @Thang INT,
     @Nam INT
@@ -452,11 +458,12 @@ BEGIN
     CLOSE HangBanCursor;
     DEALLOCATE HangBanCursor;
 END;
-[-Stored procedure này giúp bạn tạo ra một báo cáo chi tiết về các sản phẩm đã bán trong một tháng cụ thể. Nó sử dụng con trỏ để lặp qua từng sản phẩm và in ra thông tin chi tiết của sản phẩm và số lượng đã bán. Quá trình này giúp bạn kiểm tra và phân tích dữ liệu bán hàng một cách tổng quát và chi tiết.]
+```
+[Stored procedure này giúp bạn tạo ra một báo cáo chi tiết về các sản phẩm đã bán trong một tháng cụ thể. Nó sử dụng con trỏ để lặp qua từng sản phẩm và in ra thông tin chi tiết của sản phẩm và số lượng đã bán. Quá trình này giúp bạn kiểm tra và phân tích dữ liệu bán hàng một cách tổng quát và chi tiết.]
 
--4, Function để tính tổng số lượng sản phẩm trong một đơn hàng dựa trên mã đơn hàng.
+4. Function để tính tổng số lượng sản phẩm trong một đơn hàng dựa trên mã đơn hàng.
 [Function FN_TongSoLuongSanPhamTrongDonHang này có thể được sử dụng trong các stored procedure (SP_) để lấy tổng số lượng sản phẩm trong một đơn hàng, giúp cho việc tính toán và xử lý dữ liệu trở nên thuận tiện hơn.]
-'''sql
+```sql
   CREATE FUNCTION FN_TongSoLuongSanPhamTrongDonHang
 (
     @MaDonHang INT
@@ -470,8 +477,9 @@ BEGIN
     WHERE MaDonHang = @MaDonHang;
     RETURN ISNULL(@TongSoLuong, 0);
 END;
-![image](https://github.com/baolaichi/Quan_Ly_Cua_hang_Noi_That/assets/131328468/140ed078-e7ea-488e-87ea-72a26a0a236e)
-                                  -Hình Kết quả khi chạy Function-
+```
+[-Hình Kết quả khi chạy Function-] (![image](https://github.com/baolaichi/Quan_Ly_Cua_hang_Noi_That/assets/131328468/140ed078-e7ea-488e-87ea-72a26a0a236e))
+                                  
 
 
 
