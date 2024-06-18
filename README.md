@@ -143,7 +143,7 @@ I. Mô tả hệ thống (Quản lý thông tin cửa hàng nội thất)
       - NULL: Có.
     (![image](https://github.com/baolaichi/Quan_Ly_Cua_hang_Noi_That/assets/131328468/9489bed2-8dd6-472f-b926-5328b565668b))
                                                 [-Bảng Sản Phẩm-] 
- -Bảng DonHang
+ - Bảng DonHang
    - Các trường trong bảng DonHang:
       - MaDonHang:
          - Mô tả: Mã đơn hàng, là khóa chính (PK).
@@ -166,8 +166,8 @@ I. Mô tả hệ thống (Quản lý thông tin cửa hàng nội thất)
          - Mô tả: Mã khách hàng (foreign key liên kết với bảng KhachHang).
          - Kiểu dữ liệu: INT
          - Ràng buộc: Không được NULL
-   (![image](https://github.com/baolaichi/Quan_Ly_Cua_hang_Noi_That/assets/131328468/c2c84577-a0e6-476c-b8e8-216975dca1da))
-                                                 [-Bảng Đơn hàng-] 
+            (![image](https://github.com/baolaichi/Quan_Ly_Cua_hang_Noi_That/assets/131328468/c2c84577-a0e6-476c-b8e8-216975dca1da))
+              [-Bảng Đơn hàng-] 
                                        			
  -ChiTietDonHang
    + MaChiTietDonHang:
