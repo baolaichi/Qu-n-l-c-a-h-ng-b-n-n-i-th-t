@@ -1,13 +1,13 @@
-# Quan Ly Cua hang do go noi that
+# QUẢN LÝ CỬA HÀNG ĐỒ GỖ NỘI THẤT
 BTL: Mon HQT- CSDL
 --Thông Tin Cá nhân--
-- Họ và tên: Lại Chí Bảo   
-- Lớp: K57KMT.01           
-- MSSV: K215520216829
+ ## Tác Giả: Lại Chí Bảo   
+ ## Lớp: K57KMT.01           
+ ## MSSV: K215520216829
       
-I, Mô tả hệ thống (Quản lý thông tin cửa hàng nội thất)
--1, Các chức năng
--	Quản lý Sản Phẩm
+I. Mô tả hệ thống (Quản lý thông tin cửa hàng nội thất)
+1. Các chức năng
+- Quản lý Sản Phẩm
 Bảng SanPham chứa thông tin về các sản phẩm đồ gỗ mà cửa hàng bán. Các thông tin này bao gồm:
 Mã sản phẩm (MaSanPham)
 Tên sản phẩm (TenSanPham)
@@ -17,28 +17,28 @@ Số lượng tồn kho (SoLuongTon)
 Kích thước (KichThuoc)
 Chất liệu (ChatLieu)
 Màu sắc (MauSac)
--	Quản lý Khách Hàng
+- Quản lý Khách Hàng
 Bảng KhachHang chứa thông tin về khách hàng của cửa hàng. Các thông tin này bao gồm:
 Mã khách hàng (MaKhachHang)
 Tên khách hàng (TenKhachHang)
 Địa chỉ (DiaChi)
 Số điện thoại (SoDienThoai)
 Email (Email)
--	Quản lý Đơn Hàng
+- Quản lý Đơn Hàng
 Bảng DonHang chứa thông tin về các đơn hàng mà cửa hàng nhận được từ khách hàng. Các thông tin này bao gồm:
 Mã đơn hàng (MaDonHang)
 Ngày đặt hàng (NgayDatHang)
 Mã khách hàng (MaKhachHang)
 Tổng giá trị đơn hàng (TongGiaTri)
 Tình trạng đơn hàng (TinhTrangDonHang)
--	Quản lý Chi Tiết Đơn Hàng
+- Quản lý Chi Tiết Đơn Hàng
 Bảng ChiTietDonHang chứa thông tin chi tiết về từng sản phẩm trong mỗi đơn hàng. Các thông tin này bao gồm:
 Mã chi tiết đơn hàng (MaChiTietDonHang)
 Mã đơn hàng (MaDonHang)
 Mã sản phẩm (MaSanPham)
 Số lượng sản phẩm (SoLuong)
 Giá bán của sản phẩm (GiaBan)
--	Quản lý Nhà Cung Cấp
+- Quản lý Nhà Cung Cấp
 Bảng NhaCungCap chứa thông tin về các nhà cung cấp sản phẩm cho cửa hàng. Các thông tin này bao gồm:
 Mã nhà cung cấp (MaNhaCungCap)
 Tên nhà cung cấp (TenNhaCungCap)
@@ -57,7 +57,7 @@ Số điện thoại (SoDienThoai)
   d. Thêm Một Chi Tiết Hóa Đơn
   e. Cập Nhật Số Lượng Cho Một Chi Tiết Hóa Đơn
   f. Xóa Một Dòng Trong Chi Tiết Hóa Đơn
--2, Báo cáo
+2. Báo cáo
  - Báo Cáo Hàng Tồn
  - Báo Cáo Hàng Bán Nhiều Nhất Trong Tháng
  - Báo Cáo Mặt Hàng Bán Chạy Trong Tháng
@@ -65,7 +65,7 @@ Số điện thoại (SoDienThoai)
  - Cursor Báo Cáo Hàng Bán Trong Tháng
  - Function để tính tổng số lượng sản phẩm trong một đơn hàng dựa trên mã đơn hàng.
    
--3, Các bảng của hệ thống được lập
+3. Các bảng của hệ thống được lập
 - Bảng KhachHang
   + MaKhachHang (Mã khách hàng)
 Mô tả: Mã định danh duy nhất cho mỗi khách hàng.
