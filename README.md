@@ -1,6 +1,6 @@
 # QUẢN LÝ CỬA HÀNG ĐỒ GỖ NỘI THẤT
 BTL: Mon HQT- CSDL
- ##--Thông Tin Cá nhân--
+##--Thông Tin Cá nhân--
  ### Tác Giả: Lại Chí Bảo   
  ### Lớp: K57KMT.01           
  ### MSSV: K215520216829
@@ -46,17 +46,17 @@ I. Mô tả hệ thống (Quản lý thông tin cửa hàng nội thất)
         Số điện thoại (SoDienThoai)
 
 - Chức năng quản lý hàng hóa:
-  a. Liệt Kê Tất Cả Hàng Hóa
-  b. Thêm Một Hàng Hóa
-  c. Xóa Một Hàng Hóa
-  d. Sửa thông tin hàng hóa
+   Liệt Kê Tất Cả Hàng Hóa
+   Thêm Một Hàng Hóa
+   Xóa Một Hàng Hóa
+   Sửa thông tin hàng hóa
 - Chức năng Quản Lý Bán Hàng:
-  a. Thêm Một Hóa Đơn
-  b. Sửa Một Hóa Đơn
-  c. Xóa 1 hóa đơn
-  d. Thêm Một Chi Tiết Hóa Đơn
-  e. Cập Nhật Số Lượng Cho Một Chi Tiết Hóa Đơn
-  f. Xóa Một Dòng Trong Chi Tiết Hóa Đơn
+   Thêm Một Hóa Đơn
+   Sửa Một Hóa Đơn
+   Xóa 1 hóa đơn
+   Thêm Một Chi Tiết Hóa Đơn
+   Cập Nhật Số Lượng Cho Một Chi Tiết Hóa Đơn
+   Xóa Một Dòng Trong Chi Tiết Hóa Đơn
 2. Báo cáo
  - Báo Cáo Hàng Tồn
  - Báo Cáo Hàng Bán Nhiều Nhất Trong Tháng
@@ -68,34 +68,34 @@ I. Mô tả hệ thống (Quản lý thông tin cửa hàng nội thất)
 3. Các bảng của hệ thống được lập
 - Bảng KhachHang
   + MaKhachHang (Mã khách hàng)
-    a. Mô tả: Mã định danh duy nhất cho mỗi khách hàng.
-    b. PK: Đúng. Đây là trường Primary Key (PK) vì nó sẽ được dùng để xác định duy nhất mỗi khách hàng trong bảng.
-    c. Kiểu dữ liệu: INT (với AUTO_INCREMENT nếu sử dụng MySQL, hoặc SERIAL nếu sử dụng PostgreSQL)
-    d. NULL: NOT NULL. Mã khách hàng không thể là NULL vì nó là PK.
+     Mô tả: Mã định danh duy nhất cho mỗi khách hàng.
+     PK: Đúng. Đây là trường Primary Key (PK) vì nó sẽ được dùng để xác định duy nhất mỗi khách hàng trong bảng.
+     Kiểu dữ liệu: INT (với AUTO_INCREMENT nếu sử dụng MySQL, hoặc SERIAL nếu sử dụng PostgreSQL)
+     NULL: NOT NULL. Mã khách hàng không thể là NULL vì nó là PK.
    + TenKhachHang (Tên khách hàng)
-    a. Mô tả: Tên của khách hàng.
-    b. PK: Không.
-    c. FK: Không.
-    d. Kiểu dữ liệu: VARCHAR(100)
-    e. NULL: NOT NULL. Tên khách hàng là thông tin bắt buộc.
+      Mô tả: Tên của khách hàng.
+      PK: Không.
+      FK: Không.
+      Kiểu dữ liệu: VARCHAR(100)
+      NULL: NOT NULL. Tên khách hàng là thông tin bắt buộc.
    + DiaChi (Địa chỉ)
-    a. Mô tả: Địa chỉ của khách hàng.
-    b. PK: Không.
-    c. FK: Không.
-    d. Kiểu dữ liệu: VARCHAR(255)
-    e. NULL: Có thể là NULL. Địa chỉ có thể không bắt buộc phải nhập.
+      Mô tả: Địa chỉ của khách hàng.
+      PK: Không.
+      FK: Không.
+      Kiểu dữ liệu: VARCHAR(255)
+      NULL: Có thể là NULL. Địa chỉ có thể không bắt buộc phải nhập.
    + SoDienThoai (Số điện thoại)
-    a. Mô tả: Số điện thoại liên lạc của khách hàng.
-    b. PK: Không.
-    c. FK: Không.
-    d. Kiểu dữ liệu: VARCHAR(15) (hoặc tùy thuộc vào định dạng số điện thoại trong nước hoặc quốc tế)
-    e. NULL: NOT NULL. Số điện thoại là thông tin bắt buộc.
+      Mô tả: Số điện thoại liên lạc của khách hàng.
+      PK: Không.
+      FK: Không.
+      Kiểu dữ liệu: VARCHAR(15) (hoặc tùy thuộc vào định dạng số điện thoại trong nước hoặc quốc tế)
+      NULL: NOT NULL. Số điện thoại là thông tin bắt buộc.
       + Email (Email)
-    a. Mô tả: Địa chỉ email của khách hàng.
-    b. PK: Không.
-    c. FK: Không.
-    d. Kiểu dữ liệu: VARCHAR(100)
-    e. NULL: NOT NULL. Email là thông tin bắt buộc.
+     Mô tả: Địa chỉ email của khách hàng.
+     PK: Không.
+     FK: Không.
+     Kiểu dữ liệu: VARCHAR(100)
+     NULL: NOT NULL. Email là thông tin bắt buộc.
   [-Bảng Khách hàng-] (![image](https://github.com/baolaichi/Quan_Ly_Cua_hang_Noi_That/assets/131328468/a3a92715-2c73-4385-8ae9-cedfb79a2adc))
 
                            
@@ -137,10 +137,10 @@ Giải thích: Đây là chất liệu sản xuất ra sản phẩm (gỗ, kim l
 Kiểu dữ liệu: VARCHAR(50).
 NULL: Không.
     + Màu sắc (MauSac):
-        a. Loại: Không khóa
-        b. Giải thích: Đây là màu sắc của sản phẩm.
-        c. Kiểu dữ liệu: VARCHAR(50).
-        d. NULL: Có.
+         Loại: Không khóa
+         Giải thích: Đây là màu sắc của sản phẩm.
+         Kiểu dữ liệu: VARCHAR(50).
+         NULL: Có.
     [-Bảng Sản Phẩm-] (![image](https://github.com/baolaichi/Quan_Ly_Cua_hang_Noi_That/assets/131328468/9489bed2-8dd6-472f-b926-5328b565668b))
                                                 
  -Bảng DonHang
