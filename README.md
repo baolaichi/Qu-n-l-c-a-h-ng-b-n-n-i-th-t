@@ -1,6 +1,6 @@
 # QUẢN LÝ CỬA HÀNG ĐỒ GỖ NỘI THẤT
 BTL: Mon HQT- CSDL
-##--Thông Tin Cá nhân--
+ ## --Thông Tin Cá nhân--
  ### Tác Giả: Lại Chí Bảo   
  ### Lớp: K57KMT.01           
  ### MSSV: K215520216829
@@ -67,30 +67,30 @@ I. Mô tả hệ thống (Quản lý thông tin cửa hàng nội thất)
    
 3. Các bảng của hệ thống được lập
 - Bảng KhachHang
-  + MaKhachHang (Mã khách hàng)
+  MaKhachHang (Mã khách hàng)
      Mô tả: Mã định danh duy nhất cho mỗi khách hàng.
      PK: Đúng. Đây là trường Primary Key (PK) vì nó sẽ được dùng để xác định duy nhất mỗi khách hàng trong bảng.
      Kiểu dữ liệu: INT (với AUTO_INCREMENT nếu sử dụng MySQL, hoặc SERIAL nếu sử dụng PostgreSQL)
      NULL: NOT NULL. Mã khách hàng không thể là NULL vì nó là PK.
-   + TenKhachHang (Tên khách hàng)
+  TenKhachHang (Tên khách hàng)
       Mô tả: Tên của khách hàng.
       PK: Không.
       FK: Không.
       Kiểu dữ liệu: VARCHAR(100)
       NULL: NOT NULL. Tên khách hàng là thông tin bắt buộc.
-   + DiaChi (Địa chỉ)
+  DiaChi (Địa chỉ)
       Mô tả: Địa chỉ của khách hàng.
       PK: Không.
       FK: Không.
       Kiểu dữ liệu: VARCHAR(255)
       NULL: Có thể là NULL. Địa chỉ có thể không bắt buộc phải nhập.
-   + SoDienThoai (Số điện thoại)
+  SoDienThoai (Số điện thoại)
       Mô tả: Số điện thoại liên lạc của khách hàng.
       PK: Không.
       FK: Không.
       Kiểu dữ liệu: VARCHAR(15) (hoặc tùy thuộc vào định dạng số điện thoại trong nước hoặc quốc tế)
       NULL: NOT NULL. Số điện thoại là thông tin bắt buộc.
-      + Email (Email)
+  Email (Email)
      Mô tả: Địa chỉ email của khách hàng.
      PK: Không.
      FK: Không.
