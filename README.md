@@ -9,7 +9,7 @@ BTL: Mon HQT- CSDL
       
 I. Mô tả hệ thống (Quản lý thông tin cửa hàng nội thất)
 1. Các chức năng
- a. Quản lý Sản Phẩm
+ Quản lý Sản Phẩm
   - Bảng SanPham chứa thông tin về các sản phẩm đồ gỗ mà cửa hàng bán. Các thông tin này bao gồm:
     Mã sản phẩm (MaSanPham)
     Tên sản phẩm (TenSanPham)
@@ -19,7 +19,7 @@ I. Mô tả hệ thống (Quản lý thông tin cửa hàng nội thất)
     Kích thước (KichThuoc)
     Chất liệu (ChatLieu)
     Màu sắc (MauSac)
- b. Quản lý Khách Hàng
+  Quản lý Khách Hàng
   - Bảng KhachHang chứa thông tin về khách hàng của cửa hàng. Các thông tin này bao gồm:
      Mã khách hàng (MaKhachHang)
      Tên khách hàng (TenKhachHang)
