@@ -99,7 +99,6 @@ NULL: NOT NULL. Email là thông tin bắt buộc.
    + 
    ![image](https://github.com/baolaichi/Quan_Ly_Cua_hang_Noi_That/assets/131328468/a3a92715-2c73-4385-8ae9-cedfb79a2adc)
 
-
                             -Bảng Khách hàng-
 - Bảng SanPham
 Bảng SanPham chứa thông tin về các sản phẩm đồ gỗ mà cửa hàng bán. Dưới đây là mô tả chi tiết cho từng trường trong bảng:
@@ -143,8 +142,8 @@ Loại: Không khóa
 Giải thích: Đây là màu sắc của sản phẩm.
 Kiểu dữ liệu: VARCHAR(50)
 NULL: Có
-   + 
-		 ![image](https://github.com/baolaichi/Quan_Ly_Cua_hang_Noi_That/assets/131328468/9489bed2-8dd6-472f-b926-5328b565668b)
+     
+	![image](https://github.com/baolaichi/Quan_Ly_Cua_hang_Noi_That/assets/131328468/9489bed2-8dd6-472f-b926-5328b565668b)
                                                 -Bảng Sản Phẩm-
  -Bảng DonHang
 Bảng DonHang chứa thông tin về các đơn hàng.
@@ -170,7 +169,7 @@ Ràng buộc: Không được NULL.
 Mô tả: Mã khách hàng (foreign key liên kết với bảng KhachHang).
 Kiểu dữ liệu: INT
 Ràng buộc: Không được NULL
-               ![image](https://github.com/baolaichi/Quan_Ly_Cua_hang_Noi_That/assets/131328468/c2c84577-a0e6-476c-b8e8-216975dca1da)
+      ![image](https://github.com/baolaichi/Quan_Ly_Cua_hang_Noi_That/assets/131328468/c2c84577-a0e6-476c-b8e8-216975dca1da)
 
                                     -Bảng Đơn hàng-
 
@@ -199,7 +198,7 @@ Ràng buộc: Không được NULL.
 Mô tả: Giá bán của sản phẩm.
 Kiểu dữ liệu: FLOAT
 Ràng buộc: Không được NULL.
-                  ![image](https://github.com/baolaichi/Quan_Ly_Cua_hang_Noi_That/assets/131328468/a005f779-ebfe-4622-9ccc-b6ede794bbef)
+       ![image](https://github.com/baolaichi/Quan_Ly_Cua_hang_Noi_That/assets/131328468/a005f779-ebfe-4622-9ccc-b6ede794bbef)
 
      					-Bảng Chi tiết đơn hàng-
 -Bảng NhaCungCap
@@ -225,8 +224,7 @@ Mô tả: Số điện thoại của nhà cung cấp.
 Kiểu dữ liệu: VARCHAR(20)
 Ràng buộc:
 Not Null: Bắt buộc phải nhập, vì cần số điện thoại để liên hệ với nhà cung cấp.
-                  ![image](https://github.com/baolaichi/Quan_Ly_Cua_hang_Noi_That/assets/131328468/440267c5-39c7-44c9-bfab-686e196cada7)
-
+       ![image](https://github.com/baolaichi/Quan_Ly_Cua_hang_Noi_That/assets/131328468/440267c5-39c7-44c9-bfab-686e196cada7)
 
      					-Bảng Nhà Cung Cấp-
 
