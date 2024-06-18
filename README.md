@@ -96,7 +96,6 @@ PK: Không.
 FK: Không.
 Kiểu dữ liệu: VARCHAR(100)
 NULL: NOT NULL. Email là thông tin bắt buộc.
-   + 
   [-Bảng Khách hàng-] (![image](https://github.com/baolaichi/Quan_Ly_Cua_hang_Noi_That/assets/131328468/a3a92715-2c73-4385-8ae9-cedfb79a2adc))
 
                            
@@ -142,9 +141,8 @@ Loại: Không khóa
 Giải thích: Đây là màu sắc của sản phẩm.
 Kiểu dữ liệu: VARCHAR(50)
 NULL: Có
-     
-	![image](https://github.com/baolaichi/Quan_Ly_Cua_hang_Noi_That/assets/131328468/9489bed2-8dd6-472f-b926-5328b565668b)
-                                                -Bảng Sản Phẩm-
+	[-Bảng Sản Phẩm-](![image](https://github.com/baolaichi/Quan_Ly_Cua_hang_Noi_That/assets/131328468/9489bed2-8dd6-472f-b926-5328b565668b))
+                                                
  -Bảng DonHang
 Bảng DonHang chứa thông tin về các đơn hàng.
 Các trường trong bảng DonHang:
@@ -169,9 +167,9 @@ Ràng buộc: Không được NULL.
 Mô tả: Mã khách hàng (foreign key liên kết với bảng KhachHang).
 Kiểu dữ liệu: INT
 Ràng buộc: Không được NULL
-      ![image](https://github.com/baolaichi/Quan_Ly_Cua_hang_Noi_That/assets/131328468/c2c84577-a0e6-476c-b8e8-216975dca1da)
+     [-Bảng Đơn hàng-]  ![image](https://github.com/baolaichi/Quan_Ly_Cua_hang_Noi_That/assets/131328468/c2c84577-a0e6-476c-b8e8-216975dca1da)
 
-                                    -Bảng Đơn hàng-
+                                    
 
      			
  -ChiTietDonHang
@@ -198,9 +196,9 @@ Ràng buộc: Không được NULL.
 Mô tả: Giá bán của sản phẩm.
 Kiểu dữ liệu: FLOAT
 Ràng buộc: Không được NULL.
-       ![image](https://github.com/baolaichi/Quan_Ly_Cua_hang_Noi_That/assets/131328468/a005f779-ebfe-4622-9ccc-b6ede794bbef)
+     [-Bảng Chi tiết đơn hàng-](![image](https://github.com/baolaichi/Quan_Ly_Cua_hang_Noi_That/assets/131328468/a005f779-ebfe-4622-9ccc-b6ede794bbef))
 
-     					-Bảng Chi tiết đơn hàng-
+     					
 -Bảng NhaCungCap
 Bảng NhaCungCap chứa thông tin về các nhà cung cấp sản phẩm cho cửa hàng. Dưới đây là mô tả chi tiết cho từng trường trong bảng:
    + MaNhaCungCap
@@ -214,7 +212,7 @@ Mô tả: Tên của nhà cung cấp.
 Kiểu dữ liệu: VARCHAR(255)
 Ràng buộc:
 Not Null: Bắt buộc phải nhập, vì cần biết tên của nhà cung cấp.
-      + DiaChi
+     + DiaChi
 Mô tả: Địa chỉ của nhà cung cấp.
 Kiểu dữ liệu: VARCHAR(255)
 Ràng buộc:
@@ -224,13 +222,13 @@ Mô tả: Số điện thoại của nhà cung cấp.
 Kiểu dữ liệu: VARCHAR(20)
 Ràng buộc:
 Not Null: Bắt buộc phải nhập, vì cần số điện thoại để liên hệ với nhà cung cấp.
-       ![image](https://github.com/baolaichi/Quan_Ly_Cua_hang_Noi_That/assets/131328468/440267c5-39c7-44c9-bfab-686e196cada7)
+       [-Bảng Nhà Cung Cấp-](![image](https://github.com/baolaichi/Quan_Ly_Cua_hang_Noi_That/assets/131328468/440267c5-39c7-44c9-bfab-686e196cada7))
 
-     					-Bảng Nhà Cung Cấp-
+     					
 
 
--II, Các SP của các chức năng
--1, thêm, sửa, xóa Hàng Hóa. có chức năng:
+-II. Các SP của các chức năng
+-1. thêm, sửa, xóa Hàng Hóa. có chức năng:
 	[Thêm đơn hàng: Thêm dữ liệu mới vào DonHang và ChiTietDonHang.
 	Sửa đơn hàng: Cập nhật thông tin trong DonHang và xóa rồi thêm lại các chi tiết đơn hàng.
 	Xóa đơn hàng: Xóa dữ liệu từ cả hai bảng DonHang và ChiTietDonHang.]
@@ -241,7 +239,7 @@ AS
 BEGIN
  SELECT * FROM SanPham;
 END;
-
+'''
  --- Thêm Một Hàng Hóa -------
 CREATE PROCEDURE ThemHangHoa
     @TenSanPham NVARCHAR(100),
