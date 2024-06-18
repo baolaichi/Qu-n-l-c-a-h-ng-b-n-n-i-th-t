@@ -127,21 +127,21 @@ Giải thích: Đây là số lượng sản phẩm còn lại trong kho.
 Kiểu dữ liệu: INT
 NULL: Không
       + Kích thước (KichThuoc):
-Loại: Không khóa
+Loại: Không khóa.
 Giải thích: Đây là kích thước của sản phẩm, có thể là các kích thước cụ thể như chiều dài, chiều rộng, chiều cao, v.v.
-Kiểu dữ liệu: VARCHAR(50)
-NULL: Không
+Kiểu dữ liệu: VARCHAR(50).
+NULL: Không.
       + Chất liệu (ChatLieu):
-Loại: Không khóa
+Loại: Không khóa.
 Giải thích: Đây là chất liệu sản xuất ra sản phẩm (gỗ, kim loại, nhựa, v.v.).
-Kiểu dữ liệu: VARCHAR(50)
-NULL: Không
+Kiểu dữ liệu: VARCHAR(50).
+NULL: Không.
        + Màu sắc (MauSac):
 Loại: Không khóa
 Giải thích: Đây là màu sắc của sản phẩm.
-Kiểu dữ liệu: VARCHAR(50)
-NULL: Có
-   [-Bảng Sản Phẩm-] (![image](https://github.com/baolaichi/Quan_Ly_Cua_hang_Noi_That/assets/131328468/9489bed2-8dd6-472f-b926-5328b565668b))
+Kiểu dữ liệu: VARCHAR(50).
+NULL: Có.
+    [-Bảng Sản Phẩm-] (![image](https://github.com/baolaichi/Quan_Ly_Cua_hang_Noi_That/assets/131328468/9489bed2-8dd6-472f-b926-5328b565668b))
                                                 
  -Bảng DonHang
 Bảng DonHang chứa thông tin về các đơn hàng.
