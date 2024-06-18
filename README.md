@@ -9,6 +9,10 @@ BTL: Mon HQT- CSDL
  
       
 I. Mô tả hệ thống (Quản lý thông tin cửa hàng nội thất)
+    - Quản Bán hàng của cửa hàng đồ gỗ nội thất
+    - Hệ thống sẽ lưu trữ các thông tin như: Sản phẩm, Khách hàng, Hóa đơn bán hàng, nhà cung câp.
+    - Theo dõi lượng bán hàng ra, nhập sản phẩm vào và quản lý lượng hàng còn lại trong cửa hàng.
+    - Thu thập thông tin để có thể đưa ra sự gợi ý nên nhập mặt hàng nào trong lần tới.
 1. Các chức năng
    - Quản lý Sản Phẩm
       - Bảng SanPham chứa thông tin về các sản phẩm đồ gỗ mà cửa hàng bán. Các thông tin này bao gồm:
