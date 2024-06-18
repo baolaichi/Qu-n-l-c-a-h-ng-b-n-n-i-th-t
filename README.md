@@ -97,66 +97,65 @@ I. Mô tả hệ thống (Quản lý thông tin cửa hàng nội thất)
      - FK: Không.
      - Kiểu dữ liệu: VARCHAR(100)
      - NULL: NOT NULL. Email là thông tin bắt buộc.
-  [-Bảng Khách hàng-] (![image](https://github.com/baolaichi/Quan_Ly_Cua_hang_Noi_That/assets/131328468/a3a92715-2c73-4385-8ae9-cedfb79a2adc))
-
+  (![image](https://github.com/baolaichi/Quan_Ly_Cua_hang_Noi_That/assets/131328468/a3a92715-2c73-4385-8ae9-cedfb79a2adc))
+                                                 [-Bảng Khách hàng-] 
                            
 - Bảng SanPham
-Bảng SanPham chứa thông tin về các sản phẩm đồ gỗ mà cửa hàng bán. Dưới đây là mô tả chi tiết cho từng trường trong bảng:
-  + Mã sản phẩm (MaSanPham):
-Loại: Primary Key (PK)
-Giải thích: Đây là khóa chính của bảng, giúp xác định duy nhất từng sản phẩm trong bảng. Mã sản phẩm phải là duy nhất và không được trùng lặp.
-Kiểu dữ liệu: INT
-NULL: Không
-   + Tên sản phẩm (TenSanPham):
-Loại: Không khóa
-Giải thích: Đây là tên của sản phẩm, mô tả tên gọi cụ thể của mỗi sản phẩm đồ gỗ.
-Kiểu dữ liệu: VARCHAR(255)
-NULL: Không
-    + Loại sản phẩm (LoaiSanPham):
-Loại: Foreign Key (FK)
-Giải thích: Đây là khóa ngoại, liên kết với bảng khác (ví dụ, bảng LoaiSanPham) để xác định loại sản phẩm. Điều này giúp phân loại sản phẩm theo các loại khác nhau.
-Kiểu dữ liệu: INT
-NULL: Không
-     + Giá bán (GiaBan):
-Loại: Không khóa
-Giải thích: Đây là giá bán của sản phẩm.
-Kiểu dữ liệu: FLOAT
-NULL: Không
-      + Số lượng tồn kho (SoLuongTon):
-Loại: Không khóa
-Giải thích: Đây là số lượng sản phẩm còn lại trong kho.
-Kiểu dữ liệu: INT
-NULL: Không
-      + Kích thước (KichThuoc):
-Loại: Không khóa.
-Giải thích: Đây là kích thước của sản phẩm, có thể là các kích thước cụ thể như chiều dài, chiều rộng, chiều cao, v.v.
-Kiểu dữ liệu: VARCHAR(50).
-NULL: Không.
-      + Chất liệu (ChatLieu):
-Loại: Không khóa.
-Giải thích: Đây là chất liệu sản xuất ra sản phẩm (gỗ, kim loại, nhựa, v.v.).
-Kiểu dữ liệu: VARCHAR(50).
-NULL: Không.
-    + Màu sắc (MauSac):
-         Loại: Không khóa
-         Giải thích: Đây là màu sắc của sản phẩm.
-         Kiểu dữ liệu: VARCHAR(50).
-         NULL: Có.
-    [-Bảng Sản Phẩm-] (![image](https://github.com/baolaichi/Quan_Ly_Cua_hang_Noi_That/assets/131328468/9489bed2-8dd6-472f-b926-5328b565668b))
-                                                
+   - Bảng SanPham chứa thông tin về các sản phẩm đồ gỗ mà cửa hàng bán. Dưới đây là mô tả chi tiết cho từng trường trong bảng:
+       - Mã sản phẩm (MaSanPham):
+          - Loại: Primary Key (PK)
+          - Giải thích: Đây là khóa chính của bảng, giúp xác định duy nhất từng sản phẩm trong bảng. Mã sản phẩm phải là duy nhất và không được trùng lặp.
+          - Kiểu dữ liệu: INT
+          - NULL: Không
+  - Tên sản phẩm (TenSanPham):
+          - Loại: Không khóa
+          - Giải thích: Đây là tên của sản phẩm, mô tả tên gọi cụ thể của mỗi sản phẩm đồ gỗ.
+          - Kiểu dữ liệu: VARCHAR(255)
+          - NULL: Không
+   - Loại sản phẩm (LoaiSanPham):
+          - Loại: Foreign Key (FK)
+          - Giải thích: Đây là khóa ngoại, liên kết với bảng khác (ví dụ, bảng LoaiSanPham) để xác định loại sản phẩm. Điều này giúp phân loại sản phẩm theo các loại khác nhau.
+          - Kiểu dữ liệu: INT
+          - NULL: Không
+   - Giá bán (GiaBan):
+          - Loại: Không khóa
+          - Giải thích: Đây là giá bán của sản phẩm.
+          - Kiểu dữ liệu: FLOAT
+          - NULL: Không
+   - Số lượng tồn kho (SoLuongTon):
+          - Loại: Không khóa
+          - Giải thích: Đây là số lượng sản phẩm còn lại trong kho.
+          - Kiểu dữ liệu: INT
+         - NULL: Không
+    - Kích thước (KichThuoc):
+          - Loại: Không khóa.
+          - Giải thích: Đây là kích thước của sản phẩm, có thể là các kích thước cụ thể như chiều dài, chiều rộng, chiều cao, v.v.
+          - Kiểu dữ liệu: VARCHAR(50).
+          - NULL: Không.
+    - Chất liệu (ChatLieu):
+          - Loại: Không khóa.
+          - Giải thích: Đây là chất liệu sản xuất ra sản phẩm (gỗ, kim loại, nhựa, v.v.).
+          - Kiểu dữ liệu: VARCHAR(50).
+          - NULL: Không.
+   - Màu sắc (MauSac):
+         - Loại: Không khóa
+         - Giải thích: Đây là màu sắc của sản phẩm.
+         - Kiểu dữ liệu: VARCHAR(50).
+         - NULL: Có.
+    (![image](https://github.com/baolaichi/Quan_Ly_Cua_hang_Noi_That/assets/131328468/9489bed2-8dd6-472f-b926-5328b565668b))
+                                                [-Bảng Sản Phẩm-] 
  -Bảng DonHang
-Bảng DonHang chứa thông tin về các đơn hàng.
-Các trường trong bảng DonHang:
-  + MaDonHang:
-Mô tả: Mã đơn hàng, là khóa chính (PK).
-Lý do là PK: Mã đơn hàng là duy nhất cho mỗi đơn hàng và dùng để định danh đơn hàng một cách độc nhất.
-Kiểu dữ liệu: INT
-Ràng buộc: Không được NULL, tự động tăng (AUTO_INCREMENT).
-  + NgayDatHang:
-Mô tả: Ngày đặt hàng.
-Kiểu dữ liệu: DATE
-Ràng buộc: Không được NULL.
-  + NgayGiaoHang:
+     - Các trường trong bảng DonHang:
+          - MaDonHang:
+             - Mô tả: Mã đơn hàng, là khóa chính (PK).
+             - Lý do là PK: Mã đơn hàng là duy nhất cho mỗi đơn hàng và dùng để định danh đơn hàng một cách độc nhất.
+             - Kiểu dữ liệu: INT
+             - Ràng buộc: Không được NULL, tự động tăng (AUTO_INCREMENT).
+          - NgayDatHang:
+             - Mô tả: Ngày đặt hàng.
+             - Kiểu dữ liệu: DATE
+             - Ràng buộc: Không được NULL.
+  - NgayGiaoHang:
 Mô tả: Ngày giao hàng.
 Kiểu dữ liệu: DATE
 Ràng buộc: Có thể NULL (vì có thể ngày giao hàng chưa được xác định khi đơn hàng mới được tạo).
