@@ -9,7 +9,7 @@ BTL: Mon HQT- CSDL
       
 I. Mô tả hệ thống (Quản lý thông tin cửa hàng nội thất)
 1. Các chức năng
- Quản lý Sản Phẩm
+   - Quản lý Sản Phẩm
    Bảng SanPham chứa thông tin về các sản phẩm đồ gỗ mà cửa hàng bán. Các thông tin này bao gồm:
     Mã sản phẩm (MaSanPham)
     Tên sản phẩm (TenSanPham)
@@ -19,46 +19,45 @@ I. Mô tả hệ thống (Quản lý thông tin cửa hàng nội thất)
     Kích thước (KichThuoc)
     Chất liệu (ChatLieu)
     Màu sắc (MauSac)
-Quản lý Khách Hàng
-  Bảng KhachHang chứa thông tin về khách hàng của cửa hàng. Các thông tin này bao gồm:
+   - Quản lý Khách Hàng
+     Bảng KhachHang chứa thông tin về khách hàng của cửa hàng. Các thông tin này bao gồm:
      Mã khách hàng (MaKhachHang)
      Tên khách hàng (TenKhachHang)
      Địa chỉ (DiaChi)
      Số điện thoại (SoDienThoai)
      Email (Email)
-Quản lý Đơn Hàng
-  Bảng DonHang chứa thông tin về các đơn hàng mà cửa hàng nhận được từ khách hàng. Các thông tin này bao gồm:
+   - Quản lý Đơn Hàng
+     Bảng DonHang chứa thông tin về các đơn hàng mà cửa hàng nhận được từ khách hàng. Các thông tin này bao gồm:
+     Mã đơn hàng (MaDonHang)
+     Ngày đặt hàng (NgayDatHang)
+     Mã khách hàng (MaKhachHang)
+     Tổng giá trị đơn hàng (TongGiaTri)
+     Tình trạng đơn hàng (TinhTrangDonHang)
+    - Quản lý Chi Tiết Đơn Hàng
+      Bảng ChiTietDonHang chứa thông tin chi tiết về từng sản phẩm trong mỗi đơn hàng. Các thông tin này bao gồm:
+      Mã chi tiết đơn hàng (MaChiTietDonHang)
       Mã đơn hàng (MaDonHang)
-      Ngày đặt hàng (NgayDatHang)
-      Mã khách hàng (MaKhachHang)
-      Tổng giá trị đơn hàng (TongGiaTri)
-      Tình trạng đơn hàng (TinhTrangDonHang)
- Quản lý Chi Tiết Đơn Hàng
-   Bảng ChiTietDonHang chứa thông tin chi tiết về từng sản phẩm trong mỗi đơn hàng. Các thông tin này bao gồm:
-       Mã chi tiết đơn hàng (MaChiTietDonHang)
-       Mã đơn hàng (MaDonHang)
-       Mã sản phẩm (MaSanPham)
-       Số lượng sản phẩm (SoLuong)
-       Giá bán của sản phẩm (GiaBan)
- Quản lý Nhà Cung Cấp
-    Bảng NhaCungCap chứa thông tin về các nhà cung cấp sản phẩm cho cửa hàng. Các thông tin này bao gồm:
-        Mã nhà cung cấp (MaNhaCungCap)
-        Tên nhà cung cấp (TenNhaCungCap)
-        Địa chỉ (DiaChi)
-        Số điện thoại (SoDienThoai)
-
-Chức năng quản lý hàng hóa:
-   Liệt Kê Tất Cả Hàng Hóa
-   Thêm Một Hàng Hóa
-   Xóa Một Hàng Hóa
-   Sửa thông tin hàng hóa
-Chức năng Quản Lý Bán Hàng:
-   Thêm Một Hóa Đơn
-   Sửa Một Hóa Đơn
-   Xóa 1 hóa đơn
-   Thêm Một Chi Tiết Hóa Đơn
-   Cập Nhật Số Lượng Cho Một Chi Tiết Hóa Đơn
-   Xóa Một Dòng Trong Chi Tiết Hóa Đơn
+      Mã sản phẩm (MaSanPham)
+      Số lượng sản phẩm (SoLuong)
+      Giá bán của sản phẩm (GiaBan)
+    - Quản lý Nhà Cung Cấp
+      Bảng NhaCungCap chứa thông tin về các nhà cung cấp sản phẩm cho cửa hàng. Các thông tin này bao gồm:
+      Mã nhà cung cấp (MaNhaCungCap)
+      Tên nhà cung cấp (TenNhaCungCap)
+      Địa chỉ (DiaChi)
+      Số điện thoại (SoDienThoai)
+    - Chức năng quản lý hàng hóa:
+      Liệt Kê Tất Cả Hàng Hóa
+      Thêm Một Hàng Hóa
+      Xóa Một Hàng Hóa
+      Sửa thông tin hàng hóa
+    - Chức năng Quản Lý Bán Hàng:
+      Thêm Một Hóa Đơn
+      Sửa Một Hóa Đơn
+      Xóa 1 hóa đơn
+      Thêm Một Chi Tiết Hóa Đơn
+      Cập Nhật Số Lượng Cho Một Chi Tiết Hóa Đơn
+      Xóa Một Dòng Trong Chi Tiết Hóa Đơn
 2. Báo cáo
  - Báo Cáo Hàng Tồn
  - Báo Cáo Hàng Bán Nhiều Nhất Trong Tháng
