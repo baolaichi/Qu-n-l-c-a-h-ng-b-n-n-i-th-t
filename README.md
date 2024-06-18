@@ -102,10 +102,10 @@ I. Mô tả hệ thống (Quản lý thông tin cửa hàng nội thất)
                            
 - Bảng SanPham
    - Mã sản phẩm (MaSanPham):
-          - Loại: Primary Key (PK)
-          - Giải thích: Đây là khóa chính của bảng, giúp xác định duy nhất từng sản phẩm trong bảng. Mã sản phẩm phải là duy nhất và không được trùng lặp.
-          - Kiểu dữ liệu: INT
-          - NULL: Không
+      - Loại: Primary Key (PK)
+      - Giải thích: Đây là khóa chính của bảng, giúp xác định duy nhất từng sản phẩm trong bảng. Mã sản phẩm phải là duy nhất và không được trùng lặp.
+      - Kiểu dữ liệu: INT
+      - NULL: Không
    - Tên sản phẩm (TenSanPham):
           - Loại: Không khóa
           - Giải thích: Đây là tên của sản phẩm, mô tả tên gọi cụ thể của mỗi sản phẩm đồ gỗ.
