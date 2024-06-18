@@ -8,42 +8,42 @@ BTL: Mon HQT- CSDL
 I. Mô tả hệ thống (Quản lý thông tin cửa hàng nội thất)
 1. Các chức năng
  - Quản lý Sản Phẩm
-  Bảng SanPham chứa thông tin về các sản phẩm đồ gỗ mà cửa hàng bán. Các thông tin này bao gồm:
-   Mã sản phẩm (MaSanPham)
-   Tên sản phẩm (TenSanPham)
-   Loại sản phẩm (LoaiSanPham)
-   Giá bán (GiaBan)
-   Số lượng tồn kho (SoLuongTon)
-   Kích thước (KichThuoc)
-   Chất liệu (ChatLieu)
-   Màu sắc (MauSac)
-- Quản lý Khách Hàng
-Bảng KhachHang chứa thông tin về khách hàng của cửa hàng. Các thông tin này bao gồm:
-Mã khách hàng (MaKhachHang)
-Tên khách hàng (TenKhachHang)
-Địa chỉ (DiaChi)
-Số điện thoại (SoDienThoai)
-Email (Email)
-- Quản lý Đơn Hàng
-Bảng DonHang chứa thông tin về các đơn hàng mà cửa hàng nhận được từ khách hàng. Các thông tin này bao gồm:
-Mã đơn hàng (MaDonHang)
-Ngày đặt hàng (NgayDatHang)
-Mã khách hàng (MaKhachHang)
-Tổng giá trị đơn hàng (TongGiaTri)
-Tình trạng đơn hàng (TinhTrangDonHang)
-- Quản lý Chi Tiết Đơn Hàng
-Bảng ChiTietDonHang chứa thông tin chi tiết về từng sản phẩm trong mỗi đơn hàng. Các thông tin này bao gồm:
-Mã chi tiết đơn hàng (MaChiTietDonHang)
-Mã đơn hàng (MaDonHang)
-Mã sản phẩm (MaSanPham)
-Số lượng sản phẩm (SoLuong)
-Giá bán của sản phẩm (GiaBan)
-- Quản lý Nhà Cung Cấp
-Bảng NhaCungCap chứa thông tin về các nhà cung cấp sản phẩm cho cửa hàng. Các thông tin này bao gồm:
-Mã nhà cung cấp (MaNhaCungCap)
-Tên nhà cung cấp (TenNhaCungCap)
-Địa chỉ (DiaChi)
-Số điện thoại (SoDienThoai)
+  + Bảng SanPham chứa thông tin về các sản phẩm đồ gỗ mà cửa hàng bán. Các thông tin này bao gồm:
+   * Mã sản phẩm (MaSanPham)
+   * Tên sản phẩm (TenSanPham)
+   * Loại sản phẩm (LoaiSanPham)
+   * Giá bán (GiaBan)
+   * Số lượng tồn kho (SoLuongTon)
+   * Kích thước (KichThuoc)
+   * Chất liệu (ChatLieu)
+   * Màu sắc (MauSac)
+  - Quản lý Khách Hàng
+   + Bảng KhachHang chứa thông tin về khách hàng của cửa hàng. Các thông tin này bao gồm:
+    * Mã khách hàng (MaKhachHang)
+    * Tên khách hàng (TenKhachHang)
+    * Địa chỉ (DiaChi)
+    * Số điện thoại (SoDienThoai)
+    * Email (Email)
+   - Quản lý Đơn Hàng
+    + Bảng DonHang chứa thông tin về các đơn hàng mà cửa hàng nhận được từ khách hàng. Các thông tin này bao gồm:
+     * Mã đơn hàng (MaDonHang)
+     * Ngày đặt hàng (NgayDatHang)
+     * Mã khách hàng (MaKhachHang)
+     * Tổng giá trị đơn hàng (TongGiaTri)
+     * Tình trạng đơn hàng (TinhTrangDonHang)
+    - Quản lý Chi Tiết Đơn Hàng
+     + Bảng ChiTietDonHang chứa thông tin chi tiết về từng sản phẩm trong mỗi đơn hàng. Các thông tin này bao gồm:
+      * Mã chi tiết đơn hàng (MaChiTietDonHang)
+      * Mã đơn hàng (MaDonHang)
+      * Mã sản phẩm (MaSanPham)
+      * Số lượng sản phẩm (SoLuong)
+      * Giá bán của sản phẩm (GiaBan)
+    - Quản lý Nhà Cung Cấp
+     + Bảng NhaCungCap chứa thông tin về các nhà cung cấp sản phẩm cho cửa hàng. Các thông tin này bao gồm:
+       * Mã nhà cung cấp (MaNhaCungCap)
+       * Tên nhà cung cấp (TenNhaCungCap)
+       * Địa chỉ (DiaChi)
+       * Số điện thoại (SoDienThoai)
 
 - Chức năng quản lý hàng hóa:
   a. Liệt Kê Tất Cả Hàng Hóa
@@ -68,23 +68,23 @@ Số điện thoại (SoDienThoai)
 3. Các bảng của hệ thống được lập
 - Bảng KhachHang
   + MaKhachHang (Mã khách hàng)
-Mô tả: Mã định danh duy nhất cho mỗi khách hàng.
-PK: Đúng. Đây là trường Primary Key (PK) vì nó sẽ được dùng để xác định duy nhất mỗi khách hàng trong bảng.
-Kiểu dữ liệu: INT (với AUTO_INCREMENT nếu sử dụng MySQL, hoặc SERIAL nếu sử dụng PostgreSQL)
-NULL: NOT NULL. Mã khách hàng không thể là NULL vì nó là PK.
+    * Mô tả: Mã định danh duy nhất cho mỗi khách hàng.
+    * PK: Đúng. Đây là trường Primary Key (PK) vì nó sẽ được dùng để xác định duy nhất mỗi khách hàng trong bảng.
+    * Kiểu dữ liệu: INT (với AUTO_INCREMENT nếu sử dụng MySQL, hoặc SERIAL nếu sử dụng PostgreSQL)
+    * NULL: NOT NULL. Mã khách hàng không thể là NULL vì nó là PK.
    + TenKhachHang (Tên khách hàng)
-Mô tả: Tên của khách hàng.
-PK: Không.
-FK: Không.
-Kiểu dữ liệu: VARCHAR(100)
-NULL: NOT NULL. Tên khách hàng là thông tin bắt buộc.
-    + DiaChi (Địa chỉ)
-Mô tả: Địa chỉ của khách hàng.
-PK: Không.
-FK: Không.
-Kiểu dữ liệu: VARCHAR(255)
-NULL: Có thể là NULL. Địa chỉ có thể không bắt buộc phải nhập.
-     + SoDienThoai (Số điện thoại)
+    * Mô tả: Tên của khách hàng.
+    * PK: Không.
+    * FK: Không.
+    * Kiểu dữ liệu: VARCHAR(100)
+    * NULL: NOT NULL. Tên khách hàng là thông tin bắt buộc.
+   + DiaChi (Địa chỉ)
+    * Mô tả: Địa chỉ của khách hàng.
+    * PK: Không.
+    * FK: Không.
+    * Kiểu dữ liệu: VARCHAR(255)
+    * NULL: Có thể là NULL. Địa chỉ có thể không bắt buộc phải nhập.
+   + SoDienThoai (Số điện thoại)
 Mô tả: Số điện thoại liên lạc của khách hàng.
 PK: Không.
 FK: Không.
