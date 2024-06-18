@@ -1,6 +1,6 @@
 # QUẢN LÝ CỬA HÀNG ĐỒ GỖ NỘI THẤT
 BTL: Mon HQT- CSDL
---Thông Tin Cá nhân--
+ --Thông Tin Cá nhân--
  ## Tác Giả: Lại Chí Bảo   
  ## Lớp: K57KMT.01           
  ## MSSV: K215520216829
@@ -141,7 +141,7 @@ Loại: Không khóa
 Giải thích: Đây là màu sắc của sản phẩm.
 Kiểu dữ liệu: VARCHAR(50)
 NULL: Có
-	[-Bảng Sản Phẩm-](![image](https://github.com/baolaichi/Quan_Ly_Cua_hang_Noi_That/assets/131328468/9489bed2-8dd6-472f-b926-5328b565668b))
+   [-Bảng Sản Phẩm-](![image](https://github.com/baolaichi/Quan_Ly_Cua_hang_Noi_That/assets/131328468/9489bed2-8dd6-472f-b926-5328b565668b))
                                                 
  -Bảng DonHang
 Bảng DonHang chứa thông tin về các đơn hàng.
@@ -167,11 +167,9 @@ Ràng buộc: Không được NULL.
 Mô tả: Mã khách hàng (foreign key liên kết với bảng KhachHang).
 Kiểu dữ liệu: INT
 Ràng buộc: Không được NULL
-     [-Bảng Đơn hàng-]  ![image](https://github.com/baolaichi/Quan_Ly_Cua_hang_Noi_That/assets/131328468/c2c84577-a0e6-476c-b8e8-216975dca1da)
+   [-Bảng Đơn hàng-]  (![image](https://github.com/baolaichi/Quan_Ly_Cua_hang_Noi_That/assets/131328468/c2c84577-a0e6-476c-b8e8-216975dca1da))
 
-                                    
-
-     			
+                                       			
  -ChiTietDonHang
    + MaChiTietDonHang:
 Mô tả: Mã chi tiết đơn hàng, là khóa chính (PK).
@@ -196,7 +194,7 @@ Ràng buộc: Không được NULL.
 Mô tả: Giá bán của sản phẩm.
 Kiểu dữ liệu: FLOAT
 Ràng buộc: Không được NULL.
-     [-Bảng Chi tiết đơn hàng-](![image](https://github.com/baolaichi/Quan_Ly_Cua_hang_Noi_That/assets/131328468/a005f779-ebfe-4622-9ccc-b6ede794bbef))
+   [-Bảng Chi tiết đơn hàng-](![image](https://github.com/baolaichi/Quan_Ly_Cua_hang_Noi_That/assets/131328468/a005f779-ebfe-4622-9ccc-b6ede794bbef))
 
      					
 -Bảng NhaCungCap
@@ -222,24 +220,24 @@ Mô tả: Số điện thoại của nhà cung cấp.
 Kiểu dữ liệu: VARCHAR(20)
 Ràng buộc:
 Not Null: Bắt buộc phải nhập, vì cần số điện thoại để liên hệ với nhà cung cấp.
-       [-Bảng Nhà Cung Cấp-](![image](https://github.com/baolaichi/Quan_Ly_Cua_hang_Noi_That/assets/131328468/440267c5-39c7-44c9-bfab-686e196cada7))
+   [-Bảng Nhà Cung Cấp-](![image](https://github.com/baolaichi/Quan_Ly_Cua_hang_Noi_That/assets/131328468/440267c5-39c7-44c9-bfab-686e196cada7))
 
      					
 
 
--II. Các SP của các chức năng
--1. thêm, sửa, xóa Hàng Hóa. có chức năng:
+II. Các SP của các chức năng
+1. thêm, sửa, xóa Hàng Hóa. có chức năng:
 	[Thêm đơn hàng: Thêm dữ liệu mới vào DonHang và ChiTietDonHang.
 	Sửa đơn hàng: Cập nhật thông tin trong DonHang và xóa rồi thêm lại các chi tiết đơn hàng.
 	Xóa đơn hàng: Xóa dữ liệu từ cả hai bảng DonHang và ChiTietDonHang.]
+```sql
  --------------Liệt Kê Tất Cả Hàng Hóa-----------------
- '''sql
  CREATE PROCEDURE LietKeHangHoa
 AS
 BEGIN
  SELECT * FROM SanPham;
 END;
-'''
+
  --- Thêm Một Hàng Hóa -------
 CREATE PROCEDURE ThemHangHoa
     @TenSanPham NVARCHAR(100),
@@ -256,7 +254,7 @@ BEGIN
 END;
 
  ------Xóa Một Hàng Hóa--------------
- '''sql
+ ```sql
  CREATE PROCEDURE XoaHangHoa
  @MaSanPham INT
 AS
