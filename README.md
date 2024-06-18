@@ -101,8 +101,7 @@ I. Mô tả hệ thống (Quản lý thông tin cửa hàng nội thất)
                                                  [-Bảng Khách hàng-] 
                            
 - Bảng SanPham
-   - Bảng SanPham chứa thông tin về các sản phẩm đồ gỗ mà cửa hàng bán. Dưới đây là mô tả chi tiết cho từng trường trong bảng:
-       - Mã sản phẩm (MaSanPham):
+  - Mã sản phẩm (MaSanPham):
           - Loại: Primary Key (PK)
           - Giải thích: Đây là khóa chính của bảng, giúp xác định duy nhất từng sản phẩm trong bảng. Mã sản phẩm phải là duy nhất và không được trùng lặp.
           - Kiểu dữ liệu: INT
@@ -146,29 +145,29 @@ I. Mô tả hệ thống (Quản lý thông tin cửa hàng nội thất)
                                                 [-Bảng Sản Phẩm-] 
  -Bảng DonHang
      - Các trường trong bảng DonHang:
-          - MaDonHang:
+       - MaDonHang:
              - Mô tả: Mã đơn hàng, là khóa chính (PK).
              - Lý do là PK: Mã đơn hàng là duy nhất cho mỗi đơn hàng và dùng để định danh đơn hàng một cách độc nhất.
              - Kiểu dữ liệu: INT
              - Ràng buộc: Không được NULL, tự động tăng (AUTO_INCREMENT).
-          - NgayDatHang:
+       - NgayDatHang:
              - Mô tả: Ngày đặt hàng.
              - Kiểu dữ liệu: DATE
              - Ràng buộc: Không được NULL.
-  - NgayGiaoHang:
-Mô tả: Ngày giao hàng.
-Kiểu dữ liệu: DATE
-Ràng buộc: Có thể NULL (vì có thể ngày giao hàng chưa được xác định khi đơn hàng mới được tạo).
-   + TongGiaTri:
-Mô tả: Tổng tiền của đơn hàng.
-Kiểu dữ liệu: FLOAT
-Ràng buộc: Không được NULL.
-    + KhachHangID:
-Mô tả: Mã khách hàng (foreign key liên kết với bảng KhachHang).
-Kiểu dữ liệu: INT
-Ràng buộc: Không được NULL
-   [-Bảng Đơn hàng-] (![image](https://github.com/baolaichi/Quan_Ly_Cua_hang_Noi_That/assets/131328468/c2c84577-a0e6-476c-b8e8-216975dca1da))
-
+       - NgayGiaoHang:
+             - Mô tả: Ngày giao hàng.
+             - Kiểu dữ liệu: DATE
+             - Ràng buộc: Có thể NULL (vì có thể ngày giao hàng chưa được xác định khi đơn hàng mới được tạo).
+       - TongGiaTri:
+             - Mô tả: Tổng tiền của đơn hàng.
+             - Kiểu dữ liệu: FLOAT
+             - Ràng buộc: Không được NULL.
+       - KhachHangID:
+             - Mô tả: Mã khách hàng (foreign key liên kết với bảng KhachHang).
+             - Kiểu dữ liệu: INT
+             - Ràng buộc: Không được NULL
+   (![image](https://github.com/baolaichi/Quan_Ly_Cua_hang_Noi_That/assets/131328468/c2c84577-a0e6-476c-b8e8-216975dca1da))
+                                                 [-Bảng Đơn hàng-] 
                                        			
  -ChiTietDonHang
    + MaChiTietDonHang:
